@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Star Trek Beyond</title>
+<meta name="description" content="Learning J-Query">
+<meta name="keywords" content="   ">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+</head>
+
+<body>
+
+  <div class="countdown">
+    <!-- Display the countdown timer in an element -->
+    <p id="demo" class="timer"></p>
+  </div>
+
+  <div class="indexContainer">
+    <h1>Star Trek Beyond</h1>
+
+
+    <div class="slideshow">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="media/place.png" />
+            <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+          </li>
+          <li>
+            <img src="images/kitchen_adventurer_lemon.jpg" />
+            <p class="flex-caption">Adventurer Lemon</p>
+          </li>
+          <li>
+            <img src="images/kitchen_adventurer_donut.jpg" />
+            <p class="flex-caption">Adventurer Donut</p>
+          </li>
+          <li>
+            <img src="images/kitchen_adventurer_caramel.jpg" />
+            <p class="flex-caption">Adventurer Caramel</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Javascript Area -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+  <script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Jan 1, 2020 15:37:25").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
+
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+  <!-- FlexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+</body>
