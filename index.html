@@ -22,30 +22,53 @@
   </div>
 
   <div class="indexContainer">
-    <h1>Star Trek Beyond</h1>
+    <!--<h1>Star Trek Beyond</h1>-->
 
 
     <div class="slideshow">
+      <img class="mySlides" src="media/slide1.jpg" id="overlay1Trigger">
+      <img class="mySlides" src="media/slide2.jpg" id="overlay2Trigger">
+      <img class="mySlides" src="media/place2.jpeg">
+      <img class="mySlides" src="media/place2.jpeg">
+
+      <script type="text/javascript">
+      var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 4000); // Change image every 4 seconds
+        }
+      </script>
+
 
     </div>
   </div>
 
-
-  <button id="overlay1Trigger">Open overlay</button>
-
+  <!--<img src="media/place2.jpeg" alt="" id="overlay1Trigger" width="30%">-->
 
 
 
 
 
 
-
+  <!--These are the overlays for the slides-->
   <div class="overlay" id="overlay1">
-    <h1>Overlay</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/XRVD32rnzOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h1>Trailer #1</h1>
+    <iframe width="1360" height="670" src="https://www.youtube.com/embed/XRVD32rnzOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
-
+  <div class="overlay" id="overlay2">
+    <h1>Trailer #2</h1>
+    <iframe width="1360" height="670" src="https://www.youtube.com/embed/Tvq3y8BhZ2s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 
   <!-- Javascript Area -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -55,13 +78,23 @@
   $("#overlay1").hide(0);
 
   $("#overlay1Trigger").click(function(){
-    $("#overlay1").fadeIn(100);
+    $("#overlay1").fadeIn(600);
   });
 
   $("#overlay1").click(function(){
-    $(this).fadeOut(0);
+    $(this).fadeOut(200);
   });
 
+
+  $("#overlay2").hide(0);
+
+  $("#overlay2Trigger").click(function(){
+    $("#overlay2").fadeIn(600);
+  });
+
+  $("#overlay2").click(function(){
+    $(this).fadeOut(200);
+  });
   // ENDS
 
 
