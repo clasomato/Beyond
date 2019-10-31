@@ -6,6 +6,7 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 h1 {
@@ -50,17 +51,35 @@ h1 {
   width: 70%;
   margin-left: 20%;
   margin: 0 auto;
+  border-radius: 1.1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .mySlides {
   width: 100%;
   border-radius: 1em;
-  border: solid 3px #1687bc;
   cursor: pointer;
 }
 
 
+
+/*Collums*/
+.col1 {
+  width: 33%;
+  float: left;
+  margin-left: 15%;
+  color: white;
+  text-align: left;
+}
+
+.col2 {
+  width: 33%;
+  float: right;
+  margin-right: 15%;
+  color: white;
+  text-align: left;
+  overflow: hidden;
+}
 
 /*Overlay*/
 .overlay {
@@ -75,6 +94,7 @@ h1 {
   background-color: rgba(0,0,0,0.8); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
+  overflow: scroll;
 }
 
 #overlay1Trigger {
