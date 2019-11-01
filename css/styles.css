@@ -13,7 +13,7 @@ h1 {
   font-family: 'Big Shoulders Display', cursive;
   color: white;
   font-size: 10em;
-  text-shadow: 5px 5px #1687bc;
+  text-shadow: 4px 4px #1687bc;
 }
 
 
@@ -102,6 +102,37 @@ h1 {
   overflow: scroll;
 }
 
-#overlay1Trigger {
 
+
+
+/*Cast overlay STARTS*/
+.iconMag {
+
+}
+
+.castContainer {
+  text-align: left;
+  padding-left: 15%;
+  color: white;
+}
+
+.person {
+  width: 50%;
+  float: left;
+  border-radius: 2em;
+}
+
+.castText {
+  float: left;
+  width: 30%;
+  padding-left: 3%;
+}
+
+
+
+
+
+/*Trailer Overlay*/
+.trailerh1 {
+  line-height: 0.2em;
 }

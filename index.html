@@ -29,8 +29,6 @@
     <div class="slideshow">
       <img class="mySlides" src="media/slide2.jpg" id="overlay2Trigger">
       <img class="mySlides" src="media/slide1.jpg" id="overlay1Trigger">
-      <img class="mySlides" src="media/place2.jpeg">
-      <img class="mySlides" src="media/place2.jpeg">
 
       <script type="text/javascript">
       var slideIndex = 0;
@@ -67,7 +65,9 @@
     <!--Collum 2-->
     <div class="col2">
       <h2>Cast</h2>
-      <img src="media/cast.jpg" alt="" width="100%">
+      <!--<img src="media/cast.jpg" alt="" width="100%" class="castImg">-->
+      <img src="media/cast/1.jpg" alt="" width="100%" class="castImg" id="castTrigger">
+      <br>
     </div>
 
   </div>
@@ -81,13 +81,32 @@
 
   <!--These are the overlays for the slides-->
   <div class="overlay" id="overlay1">
-    <h1>Trailer #1</h1>
+    <h1 class="trailerh1">Trailer #1</h1>
     <iframe width="1360" height="670" src="https://www.youtube.com/embed/XRVD32rnzOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
   <div class="overlay" id="overlay2">
-    <h1>Trailer #2</h1>
+    <h1 class="trailerh1">Trailer #2</h1>
     <iframe width="1360" height="670" src="https://www.youtube.com/embed/Tvq3y8BhZ2s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <!--The div for the hover-->
+  <div class="overlay" id="castOverlay">
+    <div class="castContainer">
+      <h1>The Cast</h1>
+      <div class="castMember">
+        <img src="media/cast/1.jpg" alt="" class="person">
+        <div class="castText">
+          <h2><span style="font-size:0.8em;">Chris Pine as</span> James T Kirk</h2>
+          <p>James Tiberius Kirk was a 23rd century Human Federation Starfleet officer. As a Starfleet
+            cadet, he was instrumental in the defeat and death of Nero, a Romulan bent on the
+            obliteration of the entire United Federation of Planets. As a result, he was commissioned
+            directly to the rank of captain and appointed as commanding officer of the service's flagship,
+            the USS Enterprise.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Javascript Area -->
@@ -113,6 +132,18 @@
   });
 
   $("#overlay2").click(function(){
+    $(this).fadeOut(200);
+  });
+
+
+  // The Overlay for the cast
+  $("#castOverlay").hide(0);
+
+  $("#castTrigger").click(function(){
+    $("#castOverlay").fadeIn(600);
+  });
+
+  $("#castOverlay").click(function(){
     $(this).fadeOut(200);
   });
   // ENDS
