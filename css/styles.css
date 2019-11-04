@@ -45,6 +45,8 @@ h1 {
 /*Index Container*/
 .indexContainer {
   margin-top: 14%;
+  overflow: auto;
+  padding-bottom: 5%;
 }
 
 
@@ -64,9 +66,14 @@ h1 {
   width: 100%;
   border-radius: 1em;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-
+.mySlides:hover {
+  -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+  filter: blur(2px);
+  transition: 0.3;
+}
 
 /*Collums*/
 .col1 {
@@ -77,6 +84,8 @@ h1 {
   text-align: left;
 }
 
+
+/*Collum 2 has the cast image link to pop up*/
 .col2 {
   width: 33%;
   float: right;
@@ -85,6 +94,17 @@ h1 {
   text-align: left;
   overflow: hidden;
 }
+
+.castImg {
+  border-radius: 1.1em;
+  transition: 0.3;
+}
+
+.castImg:hover {
+  -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+  filter: blur(2px);
+}
+
 
 /*Overlay*/
 .overlay {
@@ -106,14 +126,15 @@ h1 {
 
 
 /*Cast overlay STARTS*/
-.iconMag {
-
-}
-
 .castContainer {
   text-align: left;
   padding-left: 15%;
   color: white;
+}
+
+.castMember {
+  float: left;
+  padding-bottom: 4%;
 }
 
 .person {
@@ -135,4 +156,27 @@ h1 {
 /*Trailer Overlay*/
 .trailerh1 {
   line-height: 0.2em;
+}
+
+
+
+
+
+/*Footer*/
+.footer {
+  width: 100%;
+  background-color: #515151;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  overflow: auto;
+}
+
+.footerSocial {
+  float: right;
+  width: 20%;
+}
+
+.social {
+  width: 20%;
+  margin-right: 5%;
 }
