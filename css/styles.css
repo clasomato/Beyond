@@ -1,5 +1,5 @@
 body {
-  /*background-image: url("../media/background.jpg");
+  /*background-image: url("../media/background2.jpg");
   background-position: top;
   background-size: cover;*/
   background-color: #3d3d3d;
@@ -14,6 +14,14 @@ h1 {
   color: white;
   font-size: 10em;
   text-shadow: 4px 4px #1687bc;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  color: white;
+  font-size: 3em;
+  text-shadow: 4px 4px #1687bc;
+  line-height: 0.7em;
 }
 
 
@@ -40,6 +48,14 @@ h1 {
   line-height: 0.1em;
 }
 
+/*Mobile optimization*/
+@media screen and (max-width: 600px) {
+  .timer{
+    font-size: 0.4em;
+  }
+}
+
+
 
 
 /*Index Container*/
@@ -49,7 +65,12 @@ h1 {
   padding-bottom: 5%;
 }
 
-
+@media screen and (max-width: 600px) {
+  .indexContainer{
+    margin-top: 28%;
+    padding-bottom: 18%;
+  }
+}
 
 
 
@@ -75,6 +96,18 @@ h1 {
   transition: 0.3;
 }
 
+/*Mobile Optimization*/
+@media screen and (max-width: 600px) {
+  .slideshow {
+    width: 80%;
+    margin-left: 10%;
+    float: left;
+    margin-bottom: 4%;
+  }
+}
+
+
+
 /*Collums*/
 .col1 {
   width: 33%;
@@ -82,6 +115,15 @@ h1 {
   margin-left: 15%;
   color: white;
   text-align: left;
+}
+
+/*Mobile Optimization*/
+@media screen and (max-width: 600px) {
+  .col1{
+    width: 80%;
+    float: none;
+    margin-left: 10%;
+  }
 }
 
 
@@ -105,6 +147,16 @@ h1 {
   filter: blur(2px);
 }
 
+/*Mobile Optimization*/
+@media screen and (max-width: 600px) {
+  .col2{
+    width: 80%;
+    float: none;
+    margin-left: 10%;
+  }
+}
+
+
 
 /*Overlay*/
 .overlay {
@@ -122,7 +174,17 @@ h1 {
   overflow: scroll;
 }
 
-
+/*Mobile Optimization*/
+@media screen and (max-width: 600px) {
+  .popVideo {
+    width: 90%;
+    height: 40%;
+  }
+  .trailerh1 {
+    font-size: 3em;
+    text-shadow: 2px 2px #1687bc;
+  }
+}
 
 
 /*Cast overlay STARTS*/
@@ -149,7 +211,38 @@ h1 {
   padding-left: 3%;
 }
 
+/*Mobile Optimization*/
+@media screen and (max-width: 600px) {
+  .castContainer {
+    padding-left: 0;
+  }
 
+  .castMember {
+    margin-bottom: 10%;
+  }
+
+  .person{
+    width: 80%;
+    float: none;
+    margin-left: 10%;
+  }
+
+  .castText {
+    width: 78%;
+    float: none;
+    margin-left: 11%;
+  }
+
+  .casth1 {
+    font-size: 6em;
+    margin-left: 10%;
+    line-height: 0.2em;
+  }
+
+  .casth2 {
+    font-size: 1.2em;
+  }
+}
 
 
 
@@ -179,4 +272,11 @@ h1 {
 .social {
   width: 20%;
   margin-right: 5%;
+}
+
+/*Mobile Optimization*/
+@media screen and (max-width: 600px) {
+  .footerSocial {
+    width: 80%;
+  }
 }
