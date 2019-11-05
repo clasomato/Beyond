@@ -1,7 +1,7 @@
 body {
-  /*background-image: url("../media/background2.jpg");
+  background-image: url("../media/background3.jpg");
   background-position: top;
-  background-size: cover;*/
+  background-size: cover;
   background-color: #3d3d3d;
   padding: 0;
   margin: 0;
@@ -29,11 +29,11 @@ h2 {
 /*Countdown at top of page*/
 
 .countdown {
+  overflow: auto;
   width: 100%;
   font-size: 600%;
   text-align: center;
   background-color: rgb(0, 0, 0, 0.1);
-  position: absolute;
   top: 0;
   background-image: url("../media/bannerBackground.jpg");
   background-position: bottom;
@@ -60,7 +60,7 @@ h2 {
 
 /*Index Container*/
 .indexContainer {
-  margin-top: 14%;
+  margin-top: 5%;
   overflow: auto;
   padding-bottom: 5%;
 }
@@ -156,6 +156,29 @@ h2 {
   }
 }
 
+
+
+
+
+/*Moziaique Gallery*/
+.mosContainer {
+  width: 100%;
+}
+
+.row1 {
+  width: 49%;
+  float: left;
+}
+
+.row2 {
+  width: 49%;
+  float: right;
+}
+
+.mosImg {
+  width: 100%;
+  margin-bottom: 2%;
+}
 
 
 /*Overlay*/

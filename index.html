@@ -6,12 +6,12 @@
 <meta name="description" content="Learning J-Query">
 <meta name="keywords" content="   ">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 <link rel="icon" type="image/png" href="media/icon.png">
 </head>
 
@@ -59,6 +59,28 @@
         starship. Left stranded in a rugged wilderness, Kirk (Chris Pine), Spock (Zachary Quinto) and the rest of the crew must
         now battle a deadly alien race while trying to find a way off their hostile planet.
       </p>
+
+      <div class="mosContainer">
+        <div class="row1">
+          <div class="parent-container">
+            <a href="media/mos/1.jpg"><img src="media/mos/1.jpg" alt="" class="mosImg"></a>
+            <a href="media/mos/3.jpg"><img src="media/mos/3.jpg" alt="" class="mosImg"></a>
+            <a href="media/mos/5.jpg"><img src="media/mos/5.jpg" alt="" class="mosImg"></a>
+            <a href="media/mos/10.jpg"><img src="media/mos/10.jpg" alt="" class="mosImg"></a>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="parent-container">
+            <a href="media/mos/2.jpg"><img src="media/mos/2.jpg" alt="" class="mosImg"></a>
+            <a href="media/mos/4.jpg"><img src="media/mos/4.jpg" alt="" class="mosImg"></a>
+            <a href="media/mos/9.jpg"><img src="media/mos/9.jpg" alt="" class="mosImg"></a>
+            <a href="media/mos/6.jpg"><img src="media/mos/6.jpg" alt="" class="mosImg"></a>
+            <a href="media/mos/8.jpg"><img src="media/mos/8.jpg" alt="" class="mosImg"></a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 
@@ -196,9 +218,33 @@
 
   <!-- Javascript Area -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
   <script>
 
   // J Query STARTS
+
+  // Magnific Popup
+  $(document).ready(function() {
+    $('.image-link').magnificPopup({type:'image'});
+  });
+
+  $('.test-popup-link').magnificPopup({
+    type: 'image'
+    // other options
+  });
+
+  $('.parent-container').magnificPopup({
+    delegate: 'a', // child items selector, by clicking on it popup will open
+    type: 'image',
+    // other options
+    gallery: {
+      enabled: true
+    }
+  });
+
+
+
+  // Overlay for the sideshow
   $("#overlay1").hide(0);
 
   $("#overlay1Trigger").click(function(){
