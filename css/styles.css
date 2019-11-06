@@ -1,7 +1,8 @@
 body {
-  background-image: url("../media/pb4.png");
-  background-position: top;
+  background-image: url("../media/bb2.jpg");
+  background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   background-color: #3d3d3d;
   padding: 0;
   margin: 0;
@@ -21,7 +22,13 @@ h2 {
   color: white;
   font-size: 3em;
   text-shadow: 4px 4px #1687bc;
-  /*line-height: 0.7em;*/
+}
+
+/*Mobile optimization*/
+@media screen and (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+  }
 }
 
 
@@ -45,12 +52,14 @@ h2 {
   font-family: 'Big Shoulders Display', cursive;
   color: white;
   line-height: 0.1em;
+  text-shadow: 4px 4px #1687bc;
 }
 
 /*Mobile optimization*/
 @media screen and (max-width: 600px) {
   .timer{
     font-size: 0.4em;
+    text-shadow: 2px 2px #1687bc;
   }
 }
 /*Countdown ENDS*/
@@ -113,6 +122,16 @@ h2 {
     margin-bottom: 4%;
   }
 }
+
+/*Tablet Optimization*/
+@media screen and (max-width: 1024px) {
+  .slideshow {
+    width: 80%;
+    margin-left: 10%;
+    float: left;
+    margin-bottom: 4%;
+  }
+}
 /*Slideshow ENDS*/
 
 
@@ -135,6 +154,18 @@ h2 {
     margin-left: 10%;
   }
 }
+
+/*Tablet Optimization*/
+@media screen and (max-width: 1024px) {
+  .col1{
+    width: 80%;
+    float: none;
+    margin-left: 10%;
+  }
+}
+
+
+
 
 
 /*Collum 2 has the cast image link to pop up*/
@@ -172,6 +203,15 @@ h2 {
 
 /*Mobile Optimization*/
 @media screen and (max-width: 600px) {
+  .col2{
+    width: 80%;
+    float: none;
+    margin-left: 10%;
+  }
+}
+
+/*Tablet Optimization*/
+@media screen and (max-width: 1024px) {
   .col2{
     width: 80%;
     float: none;
@@ -231,6 +271,18 @@ h2 {
     text-shadow: 2px 2px #1687bc;
   }
 }
+
+/*Tablet Optimization*/
+@media screen and (max-width: 1024px) {
+  .popVideo {
+    width: 90%;
+    height: 40%;
+  }
+  .trailerh1 {
+    font-size: 6em;
+    text-shadow: 2px 2px #1687bc;
+  }
+}
 /*Gallery ENDS*/
 
 
@@ -259,6 +311,10 @@ h2 {
   padding-left: 3%;
 }
 
+.castP {
+  margin-top: -6%;
+}
+
 /*Mobile Optimization*/
 @media screen and (max-width: 600px) {
   .castContainer {
@@ -269,7 +325,7 @@ h2 {
     margin-bottom: 10%;
   }
 
-  .person{
+  .person {
     width: 80%;
     float: none;
     margin-left: 10%;
@@ -288,7 +344,50 @@ h2 {
   }
 
   .casth2 {
-    font-size: 1.2em;
+    font-size: 2em;
+    text-shadow: 2px 2px #1687bc;
+  }
+
+  .castP {
+    /*margin-top: 10%;*/
+  }
+}
+
+/*Tablet Optimization*/
+@media screen and (max-width: 1024px) {
+  .castContainer {
+    padding-left: 0;
+  }
+
+  .castMember {
+    margin-bottom: 10%;
+  }
+
+  .person {
+    width: 80%;
+    float: none;
+    margin-left: 10%;
+  }
+
+  .castText {
+    width: 78%;
+    float: none;
+    margin-left: 11%;
+  }
+
+  .casth1 {
+    font-size: 6em;
+    margin-left: 10%;
+    line-height: 0.2em;
+  }
+
+  .casth2 {
+    font-size: 2em;
+    text-shadow: 2px 2px #1687bc;
+  }
+
+  .castP {
+    margin-top: 2%;
   }
 }
 /*Cast Overlay ENDS*/
@@ -328,6 +427,16 @@ h2 {
 @media screen and (max-width: 600px) {
   .footerSocial {
     width: 80%;
+  }
+}
+
+/*Tablet Optimization*/
+@media screen and (max-width: 600px) {
+  .footerSocial {
+    width: 100%;
+  }
+  .social {
+    width: 40%;
   }
 }
 /*Footer ENDS*/
