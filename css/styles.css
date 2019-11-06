@@ -21,13 +21,12 @@ h2 {
   color: white;
   font-size: 3em;
   text-shadow: 4px 4px #1687bc;
-  line-height: 0.7em;
+  /*line-height: 0.7em;*/
 }
 
 
 
 /*Countdown at top of page*/
-
 .countdown {
   overflow: auto;
   width: 100%;
@@ -54,6 +53,8 @@ h2 {
     font-size: 0.4em;
   }
 }
+/*Countdown ENDS*/
+
 
 
 
@@ -71,6 +72,8 @@ h2 {
     padding-bottom: 18%;
   }
 }
+/*Index ENDS*/
+
 
 
 
@@ -88,6 +91,11 @@ h2 {
   border-radius: 1em;
   cursor: pointer;
   transition: 0.3s;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
 }
 
 .mySlides:hover {
@@ -105,6 +113,8 @@ h2 {
     margin-bottom: 4%;
   }
 }
+/*Slideshow ENDS*/
+
 
 
 
@@ -140,12 +150,25 @@ h2 {
 .castImg {
   border-radius: 1.1em;
   transition: 0.3;
+  margin-top: 18%;
+  margin-bottom: 4%;
 }
 
 .castImg:hover {
   -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
   filter: blur(2px);
+  cursor: pointer;
 }
+
+.antonImg {
+  width: 50%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  margin-top: 4%;
+  float: right;
+  border-radius: 1em;
+}
+
 
 /*Mobile Optimization*/
 @media screen and (max-width: 600px) {
@@ -155,7 +178,7 @@ h2 {
     margin-left: 10%;
   }
 }
-
+/*Collums ENDS*/
 
 
 
@@ -208,6 +231,8 @@ h2 {
     text-shadow: 2px 2px #1687bc;
   }
 }
+/*Gallery ENDS*/
+
 
 
 /*Cast overlay STARTS*/
@@ -266,6 +291,8 @@ h2 {
     font-size: 1.2em;
   }
 }
+/*Cast Overlay ENDS*/
+
 
 
 
@@ -302,4 +329,19 @@ h2 {
   .footerSocial {
     width: 80%;
   }
+}
+/*Footer ENDS*/
+
+
+
+
+/*Animations / Keyframes*/
+/*Animation for the slideshow opacity*/
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
 }
